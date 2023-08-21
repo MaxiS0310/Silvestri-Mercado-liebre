@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ebebeb;
+}
+header{
+    background-color: #EAC926;
+    font-family: 'Roboto', sans-serif;
+}
+footer{
+    background-color: white;
+    margin-top: 0%;
+}
+ul.no-bullets{
+    list-style: none;  
+    padding: 1%;  
+}
+p{
+    font-size: 12px;
+}
+h2{
+    font-size: 24px;
+}
+
+.precio{
+    font-size: 18px;
+}
+
+.descuento{
+    font-size: 16px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#a-center-icon{
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    background-color: blue;
+    margin-left: 45%;
+    margin-right: 45%;
+    
+}
+
+.center-text{
+    text-align: center;
+}
+
+.center-text-footer{
+    text-align: center;
+    color: #03264C;    
+}
