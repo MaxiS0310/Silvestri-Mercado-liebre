@@ -1,10 +1,12 @@
 {
-  "name": "mercadoliebre",
+  "name": "prueba-clases",
   "version": "1.0.0",
-  "description": "",
+  "description": "repo para ir probando lo que voy viendo en clases\r # clase 21 en adelante ya fue mercado liebre",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+
   },
   "keywords": [],
   "author": "",
