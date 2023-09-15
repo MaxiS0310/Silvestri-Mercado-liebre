@@ -17,11 +17,20 @@
 <body>
     <header class="header-style">
         <h1 class="contenedor-h1">
-            <div class="size-h1 a-center"><img src="/images/logo-mercado-liebre.svg" alt="Logo Principal"></div>
-            <div class="size-h1 a-center">Barra de busqueda <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></div>
-            <div class="size-h1v2 a-center"><i class="fa-solid fa-hand-holding-dollar" style="color: #000000;"></i> Comprar en cuotas</div>
+            <div class="size-h1 a-center img-left"><img class="img-logo-size" src="/images/logo-mercado-liebre.svg" alt="Logo Principal"></div>
+            <div class="size-h1 a-center div-nav">
+                <form action="" method="post" class="form-style">
+                    <label></label>
+                    <input class="input-styele" type="text" name="busqueda" placeholder="Buscar productos, marcas y más">
+                </form>
+                <i class="fa-solid fa-magnifying-glass glass-style" style="color: #000000;"></i>
+            </div>
+            <div class="size-h1v2 a-center"><i class="fa-solid fa-hand-holding-dollar" style="color: #000000;"></i> Comprar en cuotas y sin tarjeta de credito</div>
         </h1>
-        <nav class="nav-contenedor">
+        <div class="burger-menu a-center">
+            <a href="#" target="" id="abrir"><i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i></a>
+        </div>
+        <nav class="nav-contenedor" id="nav">
             <ul class="ul-style">
                 <li><a href="#" target="_blank">Ofertas</a></li>
                 <li><a href="#" target="_blank">Tiendas Oficiales</a></li>
@@ -30,13 +39,30 @@
             </ul>
 
             <ul class="ul-style a-rigth-flex">
-                <li class="r-center"><a href="#" target="_blank">Creá tu cuenta <i class="fa-regular fa-id-card" style="color: #000000;"></i></a></li>
-                <li><a href="#" target="_blank">Ingresá <i class="fa-solid fa-right-to-bracket" style="color: #000000;"></i></a></li>
-                <li><a href="#" target="_blank">Mis compras <i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></a></li>
-            </ul>
-        </nav>
-        <div class="burger-menu a-center">
-            <a href="#" target="_blank"><i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i></a>
+                <li><a href="/crear-cuenta" target="_blank">Creá tu cuenta <i class="fa-regular fa-id-card i-color"></i></a></li>
+                <li><a href="#" id="" onclick="mostrar();">Ingresá <i class="fa-solid fa-right-to-bracket i-color"></i></a></li>
+                <li><a href="#" target="_blank">Mis compras <i class="fa-solid fa-basket-shopping i-color"></i></a></li>
+                <li class="cerrar-hamburguesa"><a href="#" target="" id="cerrar">Cerrar <i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a></li>
+            </ul> 
+                       
+        </nav>      
+        <div class="login-section" id="ingresar">
+            <form action="" method="post" class="form-register-login">            
+                <div class="text-div--login">                    
+                    <input class="text-input" type="text" name="usuari@" id="usuari@" placeholder="" required><span class="barra"></span>
+                    <label class="text-label" for="usuari@">Usuaria/o</label>
+                </div>
+                <div class="text-div--login">                    
+                    <input class="text-input" type="password" name="contraseña" placeholder="" required><span class="barra"></span>
+                    <label class="text-label" for="contraseña">Contraseña</label>
+                </div>
+                <div class="buttom-div">
+                    <a href="/" target="_self">
+                        <button type="button">Enviar</button>
+                    </a>
+                    <button id="" type="button" onclick="ocultar();">No ingresar</button>
+                </div>            
+            </form>
         </div> 
     </header>
     <div>
@@ -153,6 +179,6 @@
 
         <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
-    
+    <script src="/js/show.js"></script>
 </body>
 </html>

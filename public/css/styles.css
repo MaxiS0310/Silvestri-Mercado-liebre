@@ -35,6 +35,9 @@ main{
     justify-content: space-between;
     align-items: center;
 }
+.img-logo-size{
+    height: 100%;
+}
 .size-h1{
     width: 50%;
     min-width: 100px;
@@ -43,22 +46,53 @@ main{
     width: 100%;
     min-width: 100px;
 }
-
+.form-style{
+    display: inline;
+}
+.input-styele{
+    width: 95%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #EAC926;
+}
+.div-nav{
+    position: relative;
+}
+.glass-style{
+    position: absolute;
+    right: 5%;
+    top: 10px;
+    background-color: white;    
+}
 .nav-contenedor{
     width: 100%;
+    display: none;
+    position: relative;
+    background: rgba(	3, 38, 76, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;   
+}
+
+.nav-contenedor.visible{
     display: flex;
 }
 
+
 .ul-style{
     list-style: none;
-    display: none;
+    display: block;
     width: 50%; 
-    padding: 0px; 
+    padding: 0px;
+    
+}
+.ul-style li{
+    padding: 5px 0px;
 }
 
 .ul-style a{
     text-decoration: none;
-    color: #222222;
+    color: white;
 }
 
 .burger-menu{
@@ -122,11 +156,162 @@ main{
     display: none;
 }
 
-@keyframes primera{
-    0%{ background-color: blue; opacity: 50%;}
-    50%{background-color: red; opacity: 70%;}
-    100%{background-color: black; opacity: 100%;}
+/*ESTILO DEL REGISTRO-----------------------------------------------------------*/
+
+.body-register{
+    background-color: #ebebeb;
 }
+
+:root{
+    --colorTextos: #49454567; 
+}
+
+.register-header{
+    background-color: #EAC926;
+    padding: 10px;
+    text-align: center;
+}
+.register-logo{
+    max-width: 400px;
+}
+
+.main-register{
+   margin: 30px auto;
+   max-width: 400px;
+   
+}
+.register-tittle{
+    font-size: 25px;
+    padding: 10px;
+    color: #03264C;
+    text-decoration: underline;
+}
+
+.form-register{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(234, 201, 38);
+    border-radius: 5px;
+    width: 100%;
+    
+}
+.text-div{
+    position: relative;
+    margin: 35px 15px;
+}
+.text-input{
+    display: block;
+    border: none;
+    padding: 10px 10px 10px 5px;
+    width: 100%;
+    border-bottom: 1px solid var(--colorTextos);
+}
+.text-input:focus{
+    outline: none;
+    color: #666;
+}
+.text-label{
+    color: #03264C;
+    transition: 0.5s ease-in-out all;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none;
+}
+.text-input:focus~.text-label, input:valid~.text-label{
+    top: -20px;
+    font-size: 10px;
+    color: #03264C;
+    font-weight: bold;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #EAC926, #666);
+    transition: 0.3s ease width;
+    left: 0;    
+}
+.text-input:focus~.barra::before{
+    width: 100%;
+}
+
+.register-div{
+    display: flex;
+    justify-content: space-around;  
+    margin: 35px 0px;  
+}
+.register-art{
+    margin: 35px 15px;
+}
+.register-art div{
+    margin: 15px;
+}
+.register-photo{
+    margin: 35px 15px;
+}
+.register-photo input{
+    padding: 15px 0px;
+}
+.buttom-div{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.buttom-div button{
+    background-color: #EAC926;
+    padding: 5px;
+    border-radius: 5px;
+    color: #03264C;
+    font-weight: bold;
+    font-size: 15px;
+}
+.buttom-div button:hover{
+    color: #ebebeb;
+    font-size: 17px;
+    background: linear-gradient(to right, #EAC926, #03264C);
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding: 20px 0px 20px 0px;
+}
+
+
+/*ESTILO DEL LOGIN-----------------------------------------------------------*/
+
+.login-section{
+    display: none;
+    background: #ebebeb;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.form-register-login{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(234, 201, 38);
+    border-radius: 5px;
+    width: 100%;
+    padding: 30px 5px;
+}
+.text-div--login{
+    position: relative;
+    margin: 10px 10px;
+    padding: 20px 0px;
+}
+
+
+
+
 
 @media(min-width: 520px){
     .size-h1{
@@ -137,16 +322,34 @@ main{
         width: 33.3%;
         min-width: 180px;
     }
+    .img-logo-size{
+        padding: 0px 10px 0px 0px;
+        margin: 15px;
+    }
     .nav-contenedor{
+        display: flex;
         margin-top: 50px;
+        background:#EAC926;
+        padding: 0px;
     }
     .ul-style{
         list-style: none;
-        display: flex;                
+        display: flex;
+        width: 50%; 
+        padding: 0px;                 
     }
-    
+     
     .ul-style li{
         margin: 0 10px;
+    }
+    .ul-style a{
+        color: #222222;
+    }
+    .i-color{
+        color: #222222;
+    }
+    .cerrar-hamburguesa{
+        display: none;
     }
     .contenedor-section{
         justify-content: space-around;
@@ -174,8 +377,14 @@ main{
 }
 
 @media(min-width: 920px){
-
-
+    .img-logo-size{
+        padding: 0px 0px 0px 0px;
+        margin: 10px 25px 0px 5px;
+        max-width: 200px;
+    }
+    .img-left{
+        text-align: left;
+    }
 
     .box1{
         width: 22%;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu cuenta</title>
+<!-- link de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+</head>
+<body class="body-register">
+    <header class="register-header">
+        <img class="register-logo" src="/images/logo-mercado-liebre.svg" alt="Logo Principal">
+    </header>
+    <main class="main-register">
+        <form action="" method="post" class="form-register" id="form">
+            <h1 class="a-center register-tittle">REGISTRO</h1>
+            <div class="text-div">
+                <input class="text-input" type="text" name="nombre_apellido" id="nombre_apellido" required><span class="barra"></span>
+                <label class="text-label" for="nombre_apellido">Nombre y Apellido</label>
+            </div>
+            <div class="text-div">                
+                <input class="text-input" type="text" name="usuari@" id="usuari@" required><span class="barra"></span>
+                <label class="text-label" for="usuari@">Usuaria/o</label>
+            </div>
+            <div class="register-div">
+                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+            </div>
+            <div class="text-div">                
+                <input class="text-input" type="text" name="domicilio" id="domicilio" required><span class="barra"></span>
+                <label class="text-label" for="domicilio"> Domicilio</label>
+            </div>
+            <div class="register-div">
+                <h2>Perfil de Usuaria/o</h2>
+                <input type="radio" name="perfil_usuario" value="comprador" required>
+                <label for="perfil_usuario">Comprador</label>
+                <input type="radio" name="perfil_usuario" value="vendedor" required>
+                <label for="perfil_usuario">Vendedor</label>
+            </div>
+            <article class="register-art">
+                <h2>Intereses</h2>
+                <div>
+                    <input type="checkbox" name="categorias-interees" value="electro">
+                    <label for="categorias-interees">Electro</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="categorias-interees" value="moda">
+                    <label for="categorias-interees">Moda</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="categorias-interees" value="hogar">
+                    <label for="categorias-interees">Hogar</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="categorias-interees" value="jugueteria">
+                    <label for="categorias-interees">Jugueteria</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="categorias-interees" value="vida-sana">
+                    <label for="categorias-interees">Vida sana</label>
+                </div>
+            </article>
+            <div class="register-photo">
+                <h2>Foto de Usuaria/o</h2>
+                <input type="file" name="foto_usuario" accept=".jpg">
+            </div>
+            <div class="text-div">                
+                <input class="text-input" type="password" name="contraseña" id="password" placeholder="" required><span class="barra"></span>
+                <label class="text-label" for="contraseña">Contraseña</label>
+            </div>
+            <div class="text-div">
+                <input class="text-input" type="password" name="contraseña" id="confirme_password" placeholder="" required><span class="barra"></span>
+                <label class="text-label" for="contraseña">Confirmar Contraseña</label>
+            </div>              
+  
+            <div class="buttom-div">    
+                <a href="/" target="_self">
+                    <button type="submit" value="submit">Crear</button>    <!-- si el type es botton funciona el link de envio a la pagina principal -->
+                </a>                          
+                <button type="reset">Borrar</button>
+            </div>
+            <p class="warnings" id="warnings"></p>
+        </form>
+    </main>
+    <script src="/js/validar.js"></script>
+</body>
+</html>
