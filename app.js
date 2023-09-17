@@ -17,7 +17,5 @@ app.get("/crear-cuenta", function(req,res){
     res.sendFile(path.resolve(__dirname, "./views/register.html"))
 });
 
-app.get("/ingresar", function(req,res){
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
-});
+
 
