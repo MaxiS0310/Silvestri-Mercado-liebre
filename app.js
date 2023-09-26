@@ -2,11 +2,14 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
+//process es un objeto que esta dentro de node
+const port = process.env.PORT || 3001;
+
 app.use(express.static(path.resolve(__dirname, "./public")))
 
 
-app.listen(3002, () =>{
-    console.log("Server 3002 on")
+app.listen(port, () =>{
+    console.log(`Server on ${port}`);
 })
 
 app.get("/", function(req,res){
